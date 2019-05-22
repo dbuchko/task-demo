@@ -1,0 +1,8 @@
+---
+applications:
+- name: task-demo
+  memory: 128M
+  instances: 0
+  host: task-demo-db
+  buildpack: python_buildpack
+  command: python hello.py

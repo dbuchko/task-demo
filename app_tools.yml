@@ -1,0 +1,15 @@
+scope: one-app
+
+triggers:
+  etl_5s:
+    type: schedule
+    expression: "@every 5s"
+    action: run_sayhello
+
+actions:
+  run_sayhello:
+    type: cf-task
+    app: task-demo
+    config:
+      command: "python hello.py"
+      memory_in_mb: 512
