@@ -3,6 +3,9 @@ applications:
 - name: task-demo
   memory: 128M
   instances: 0
-  host: task-demo-db
-  buildpack: python_buildpack
+  no-route: true
+  buildpacks:
+   - python_buildpack
   command: python hello.py
+  services:
+   - scheduler-dbuchko
