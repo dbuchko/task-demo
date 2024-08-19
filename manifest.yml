@@ -8,4 +8,4 @@ applications:
    - python_buildpack
   command: python hello.py
   services:
-   - scheduler-dbuchko
+   - my-scheduler
